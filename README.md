@@ -1,10 +1,13 @@
-# Interactive Question Deletion Tool
+# Study Question Manager
 
-This Python script provides a simple interactive tool for managing a list of questions from a text file. The script randomly selects a question from the list, displays it, and allows the user to decide whether to delete it. It's ideal for interactive review sessions or managing question pools.
+## Description
+This Python script helps you manage a list of study questions interactively. It allows users to either continue from a previously saved session or restart with a new set of questions. You can review questions, delete them once answered, and save the remaining questions for later.
 
 ## Features
-- Reads a list of questions from a `questions.txt` file.
-- Randomly selects a question for review.
-- Interactive prompts for deleting or keeping questions.
-- Displays the number of remaining questions after each operation.
+- **Start Over or Continue**: Choose to begin with a new question set or resume from your last session.
+- **Interactive Session**: Randomly select questions, decide to delete or keep them.
+- **Save Progress**: Remaining questions are saved in `save.txt` for the next session.
 
+## Files
+- **`questions.txt`**: Original list of questions (one question per line).
+- **`save.txt`**: Stores the remaining questions after each session.
