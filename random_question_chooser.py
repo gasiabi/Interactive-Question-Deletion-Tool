@@ -1,8 +1,18 @@
 import codecs
 import random
 
-with codecs.open("questions.txt", "r", "utf-8") as file:
-    temp = file.read().splitlines()
+while True:
+    start = input("Do you want to continue studying or start over? c or s\n")
+    if start == "c":
+        with codecs.open("save.txt", "r", "utf-8") as file:
+            temp = file.read().splitlines()
+        break
+    elif start == "s":
+        with codecs.open("questions.txt", "r", "utf-8") as file:
+            temp = file.read().splitlines()
+        break
+    else:
+        continue
 
 while len(temp) != 0:
     print("The number of questions:", len(temp))
@@ -15,4 +25,9 @@ while len(temp) != 0:
     elif answer == "n":
         print("Good luck next time! The question is still in the system.\n")
         continue
+    else:
+        break
 
+with codecs.open("save.txt", "w", "utf-8") as file:
+    for question in temp:
+        file.write(question + "\n")
